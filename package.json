@@ -1,0 +1,25 @@
+{
+  "name": "e-comm-svc",
+  "version": "1.0.0",
+  "description": "e-commerce service (backend )",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princeparmar/e-comm-svc.git"
+  },
+  "author": "pradip parmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/princeparmar/e-comm-svc/issues"
+  },
+  "homepage": "https://github.com/princeparmar/e-comm-svc#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "winston": "^3.2.1"
+  }
+}
