@@ -1,4 +1,5 @@
 require('./init')
+require('./helpers/pg-halper/connection')
 const express = require('express')
 
 const app = express()
