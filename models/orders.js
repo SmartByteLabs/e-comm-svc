@@ -23,6 +23,12 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: { name: 'addressid', allowNull: true },
       onDelete: 'CASCADE',
     })
+
+    orders.hasMany(models.order_items, {
+      as: "orderItems",
+      foreignKey: { name: 'orderid', allowNull: true },
+      onDelete: 'CASCADE',
+    })
   };
   return orders;
 };

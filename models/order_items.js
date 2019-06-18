@@ -9,6 +9,14 @@ module.exports = (sequelize, DataTypes) => {
 }, {});
   order_items.associate = function(models) {
     // associations can be defined here
+    order_items.belongsTo(models.products, {
+      foreignKey: { name: 'productid', allowNull: true },
+      onDelete: 'CASCADE',
+    })
+    order_items.belongsTo(models.orders, {
+      foreignKey: { name: 'orderid', allowNull: true },
+      onDelete: 'CASCADE',
+    })
   };
   return order_items;
 };

@@ -11,6 +11,15 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   products.associate = function(models) {
     // associations can be defined here
+    products.hasMany(models.order_items, {
+      foreignKey: { name: 'productid', allowNull: true },
+      onDelete: 'CASCADE',
+    })
+    products.hasMany(models.categories, {
+      foreignKey: { name: 'productid', allowNull: true },
+      onDelete: 'CASCADE',
+    })
+    
   };
   return products;
 };
