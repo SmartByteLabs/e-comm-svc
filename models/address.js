@@ -1,6 +1,4 @@
 'use strict';
-const users = require('./users')
-
 module.exports = (sequelize, DataTypes) => {
   const address = sequelize.define('address', {
     address: DataTypes.STRING,
