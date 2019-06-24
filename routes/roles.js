@@ -5,7 +5,7 @@ const model = require('../models')
 
 // return as per id
 roles.get('/:id(\\d+)',function(req,res){
-    model.roles.find(req.params.id).then(data => res.send(data))
+    model.roles.findByPk(req.params.id).then(data => res.send(data))
 })
 
 // return whole list

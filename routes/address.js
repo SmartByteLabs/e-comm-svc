@@ -5,7 +5,7 @@ const model = require('../models')
 
 // return as per id
 address.get('/:id(\\d+)',function(req,res){
-    model.address.find(req.params.id).then(data => res.send(data))
+    model.address.findByPk(req.params.id).then(data => res.send(data))
 })
 
 // return whole list

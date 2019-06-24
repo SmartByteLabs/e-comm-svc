@@ -5,7 +5,7 @@ const model = require('../models')
 
 // return as per id
 admin.get('/:id(\\d+)',function(req,res){
-    model.admin.find(req.params.id).then(data => res.send(data))
+    model.admin.findByPk(req.params.id).then(data => res.send(data))
 })
 
 // return whole list

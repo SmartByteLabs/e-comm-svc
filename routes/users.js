@@ -5,7 +5,7 @@ const model = require('../models')
 
 // return as per id
 users.get('/:id(\\d+)',function(req,res){
-    model.users.find(req.params.id).then(data => res.send(data))
+    model.users.findByPk(req.params.id).then(data => res.send(data))
 })
 
 // return whole list

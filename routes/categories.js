@@ -5,7 +5,7 @@ const model = require('../models')
 
 // return as per id
 categories.get('/:id(\\d+)',function(req,res){
-    model.categories.find(req.params.id).then(data => res.send(data))
+    model.categories.findByPk(req.params.id).then(data => res.send(data))
 })
 
 // return whole list

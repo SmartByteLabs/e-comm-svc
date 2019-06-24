@@ -5,7 +5,7 @@ const model = require('../models')
 
 // return as per id
 coupons.get('/:id(\\d+)',function(req,res){
-    model.coupons.find(req.params.id).then(data => res.send(data))
+    model.coupons.findByPk(req.params.id).then(data => res.send(data))
 })
 
 // return whole list
